@@ -6,7 +6,7 @@ import { Router, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
   title = 'one-project';
@@ -14,8 +14,8 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-      setTimeout(() => {
-        this.router.navigateByUrl("/home");
-      }, 100);
+    setTimeout(() => {
+      this.router.navigateByUrl('/home');
+    }, 100);
   }
 }
