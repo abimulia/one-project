@@ -36,7 +36,8 @@
           <p class="choice-prefix">{{ answerOptions[i] }}</p>
           <p
             class="choice-text"
-            (click)="selectAnswer(i + 1)"
+            (click)="selectAnswer(
+              i + 1)"
           >
             {{ choice.value }}
           </p>
