@@ -1,82 +1,115 @@
+#game {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 100vh;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 20px;
+}
+
+.question-box {
+  width: 100%;
+}
+
 .choice-container {
-    display: flex;
-    margin-bottom: 0.5rem;
-    width: 100%;
-    font-size: 1.8rem;
-    border: 0.1rem solid rgba(86, 165, 235, 0.25);
-    background-color: white;
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 0.1rem solid rgba(86, 165, 235, 0.25);
+  background-color: white;
+  border-radius: 4px;
+}
+
+.choice-container p {
+  font-size: 1rem;
 }
 
 .choice-container:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-    transform: translateX(-0.1rem);
-    transition: transform 150ms;
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  transform: translateX(-0.1rem);
+  transition: transform 150ms;
+}
+
+@media screen and (min-width: 780px) {
+  .choice-container p {
+    font-size: 1.8rem;
+  }
 }
 .choice-prefix {
-    padding: 1.5rem 2.5rem;
-    background-color: #56a5eb;
-    color: white;
+  padding: 10px;
+  background-color: #56a5eb;
+  color: white;
+  margin: 0;
 }
 
 .choice-text {
-    padding: 1.5rem;
-    width: 100%;
+  padding: 10px;
+  width: 100%;
+  margin: 0;
 }
 
 .correct {
-    background-color: #28a745;
+  background-color: #28a745;
 }
 
 .incorrect {
-    background-color: #dc3545;
+  background-color: #dc3545;
 }
 /* HUD */
-#hud {
-    display: flex;
-    justify-content: space-between;
+.hud {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .hud-prefix {
-    text-align: center;
-    font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .hud-main-text {
-    text-align: center;
+  text-align: center;
+  margin: 0;
 }
 
-#progressBar{
-    width: 20rem;
-    height: 4rem;
-    border:  0.3rem solid #56a5eb;
-    margin-top: 1.5rem;
+#progressBar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.3rem solid #56a5eb;
+  margin-top: 1.5rem;
+  border-radius: 4px;
 }
 
-#progressBarFull{
-    height: 3.4rem;
-    background-color: #56a5eb;
-    width: 0%;
+#progressBarFull {
+  height: 100%;
+  background-color: #56a5eb;
+  width: 0%;
 }
 
 /* Loader */
 
 #loader {
-    border: 1.6rem solid white;
-    border-radius: 50%;
-    border-top: 1.6rem solid #56a5eb;
-    width: 12rem;
-    height: 12rem;
-    animation: spin 2s linear infinite;
-    
+  border: 1.6rem solid whitesmoke;
+  border-radius: 50%;
+  border-top: 1.6rem solid #56a5eb;
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-    0%{
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
