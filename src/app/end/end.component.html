@@ -1,0 +1,22 @@
+<div class="end">
+  <h1>Game Over</h1>
+  <h2>Your score is: {{ mostRecentScore }}</h2>
+  <form class="score-input">
+    <input class="btn" type="text" id="gamername" [(ngModel)]="gamername" name="gamername" placeholder="name" [disabled]="submitInvalid"/>
+    <button class="btn" type="submit" (click)="saveScore($event)" [disabled]="submitInvalid">Save Score</button>
+  </form>
+  <a
+    routerLink="/game"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page"
+    class="btn"
+    >Play Game</a
+  >
+  <a
+    routerLink="/home"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page"
+    class="btn"
+    >Go Home</a
+  >
+</div>
